@@ -414,8 +414,8 @@ export function Header() {
     };
     
     return (
-        <div className="flex flex-col items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-            <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+        <div className="flex flex-col items-center justify-center md:pt-10 h-screen md:h-auto dark:bg-black bg-white relative w-full">
+            <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-3/5 md:h-[40rem] px-4">
                 <motion.div
                     initial={{
                         opacity: 0,
@@ -437,14 +437,14 @@ export function Header() {
                         Kecamatan Ciampea, Desa Cibanteng, Bogor, Jawa Barat, Indonesia.
                     </p>
                 </motion.div>
-                <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-                <div className="absolute w-full h-72 right-0 left-0 md:h-full z-10 m-auto">
+                <div className="hidden md:inline absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+                <div className="absolute w-full h-80 right-0 left-0 md:h-full z-10 m-auto">
                     <World data={sampleArcs} globeConfig={globeConfig} />
                 </div>
             </div>
 
             {/* search */}
-            <div className="flex flex-col justify-center mt-10 items-center px-4">
+            <div className="flex flex-col justify-center md:mt-10 items-center px-4">
                 <PlaceholdersAndVanishInput
                     placeholders={placeholders}
                     onChange={handleChange}
