@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className='bg-black'>
+    <div className='bg-zinc-950'>
       <Header />
       <DataRumah />
     </div>

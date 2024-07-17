@@ -414,7 +414,7 @@ export function Header() {
     };
     
     return (
-        <div className="flex flex-col items-center md:pt-10 h-[68vh] md:h-auto dark:bg-black bg-white relative w-full">
+        <div className="flex flex-col items-center md:pt-10 h-[68vh] md:h-auto dark:bg-zinc-950 bg-white relative w-full">
             <div className="max-w-7xl mx-auto w-full mt-14 relative overflow-hidden h-full md:h-[40rem] px-4">
                 <motion.div
                     initial={{
@@ -437,7 +437,7 @@ export function Header() {
                         Kecamatan Ciampea, Desa Cibanteng, Bogor, Jawa Barat, Indonesia.
                     </p>
                 </motion.div>
-                <div className="hidden md:inline absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+                <div className="hidden md:inline absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-zinc-950 to-white z-40" />
                 <div className="absolute w-full h-80 right-0 left-0 md:h-full z-10 m-auto">
                     <World data={sampleArcs} globeConfig={globeConfig} />
                 </div>

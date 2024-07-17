@@ -71,7 +71,7 @@ export function DataTable<TData, TValue>({
                 onSubmit={onSubmit}
             />
             <div className="rounded-xl border mt-5">
-                <Table>
+                <Table className="h-24">
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>
@@ -107,7 +107,7 @@ export function DataTable<TData, TValue>({
                         ) : (
                             <TableRow>
                                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                                    No results.
+                                    Tidak ada data
                                 </TableCell>
                             </TableRow>
                         )}
