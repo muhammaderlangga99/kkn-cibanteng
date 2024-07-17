@@ -444,13 +444,13 @@ export function Header() {
             </div>
 
             {/* search */}
-            <div className="flex flex-col justify-center md:mt-10 items-center px-4">
+            {/* <div className="flex flex-col justify-center md:mt-10 items-center px-4">
                 <PlaceholdersAndVanishInput
                     placeholders={placeholders}
                     onChange={handleChange}
                     onSubmit={onSubmit}
                 />
-            </div>
+            </div> */}
 
         </div>
     );

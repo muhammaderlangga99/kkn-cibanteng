@@ -12,13 +12,13 @@ async function getData(): Promise<Rumah[]> {
         },
         {
             id: 2,
-            alamat: "Gg. Suka Maju No. 8",
+            alamat: "Gg. bojong gede No. 3",
             kk: "Bpk. Purnomo",
             link: "https://maps.app.goo.gl/zQS7fysk1mY6Na2r9",
         },
         {
             id: 3,
-            alamat: "Gg. Suka Maju No. 9",
+            alamat: "Gg. tajur halang No. 3",
             kk: "Bpk. Sugi",
             link: "https://maps.app.goo.gl/2Y8m4fZ8n9W6mQmB9",
         }
@@ -28,9 +28,9 @@ async function getData(): Promise<Rumah[]> {
 export default async function DataRumah() {
   const data = await getData()
 
-  return (
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
-    </div>
-  )
+    return (
+        <div className="container mx-auto -translate-y-28 md:-translate-y-0">
+            <DataTable columns={columns} data={data} />
+        </div>
+    );
 }
