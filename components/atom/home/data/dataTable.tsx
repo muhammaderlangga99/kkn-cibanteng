@@ -44,12 +44,14 @@ export function DataTable<TData, TValue>({
     },
   })
 
-  const placeholders = [
+    const placeholders = [
         "Cari...",
-        "Nurdin",
-        "Steven",
-        "Ari Wibowo",
-        "Rizky",
+        "Suka Maju No. 3",
+        "bojong gede No. 9",
+        "tajur halang No. 4",
+        "Warung Jambu No. 2",
+        "Cilangkap No. 1",
+        "Rawa Buntu No. 3"
     ];
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,19 +61,16 @@ export function DataTable<TData, TValue>({
         e.preventDefault();
         console.log("submitted");
     };
-      
     
     return (
         <div>
             <PlaceholdersAndVanishInput
                 placeholders={placeholders}
-                onChange={(event) => {
-                    table.getColumn("alamat")?.setFilterValue(event.target.value)
-                }}
+                onChange={(event) => table.getColumn("alamat")?.setFilterValue(event.target.value)}
                 onSubmit={onSubmit}
             />
-            <div className="rounded-xl border mt-5">
-                <Table className="h-24">
+            <div className="rounded-xl bg-zinc-900 mt-5">
+                <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>

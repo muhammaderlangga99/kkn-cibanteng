@@ -47,7 +47,7 @@ export default async function DataRumah() {
   const data = await getData()
 
     return (
-        <div className="container mx-auto md:-translate-y-0">
+        <div className="container mx-auto">
             <DataTable columns={columns} data={data} />
         </div>
     );
