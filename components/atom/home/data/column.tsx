@@ -1,6 +1,16 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
+import { IconLocationFill } from '@irsyadadl/paranoid';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -34,11 +44,15 @@ export const columns: ColumnDef<Rumah>[] = [
     },
     {
         accessorKey: "link",
-        header: "Link",
+        header: "Lokasi",
         cell: ({ row }) => {
             const link = row.getValue("link") as string;
-            return <a href={link} className="text-blue-500">gmaps</a>
-        }
+            const alamat = row.getValue("alamat") as string;
+            return (
+                <a href={link} className="text-white bg-zinc-800 px-3 md:px-2 py-1.5 shadow-lg flex justify-center md:inline-block rounded-full">
+                    <IconLocationFill className="size-4 inline-block mr-1" />gmaps</a>
+            );
+        },
         // bungkus isi cell dengan tag <a> untuk membuat link
     
     },

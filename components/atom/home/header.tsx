@@ -430,8 +430,7 @@ export function Header() {
                     }}
                     className="div"
                 >
-                    <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-                        PETA RT. 05 RW. 05
+                    <h2 className="text-center text-xl md:text-4xl font-bold m-auto text-black dark:text-white">PETA RT. 05 RW. 05
                     </h2>
                     <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
                         Kecamatan Ciampea, Desa Cibanteng, Bogor, Jawa Barat, Indonesia.
