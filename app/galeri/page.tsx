@@ -1,9 +1,10 @@
+import { Foto } from '@/components/atom/galeri/foto';
 import React from 'react'
 
 export default function Galeri() {
-  return (
-      <div>
-          ini adalah halaman galeri
-    </div>
-  )
+    return (
+        <div>
+            <Foto />
+        </div>
+    );
 }
