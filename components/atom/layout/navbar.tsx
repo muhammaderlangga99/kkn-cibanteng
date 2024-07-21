@@ -35,7 +35,7 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ThemeSwitch from './themeSwitch';
-import { Ambulance, FireExtinguisher, ShieldAlert } from 'lucide-react';
+import { Ambulance, FireExtinguisher, Flame, ShieldAlert } from 'lucide-react';
 const components: { title: string; href: string, icon: any }[] = [
     {
         title: "Home",
@@ -88,7 +88,7 @@ export default function Nav({ className }: { className?: string }) {
                                     <ShieldAlert size={18} />
                                 </Link>
                                 <Link href="https://github.com/muhammaderlangga99" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                                    <FireExtinguisher size={18} />
+                                    <Flame size={18} />
                                 </Link>
                                 <ThemeSwitch className='w-auto' />
                             </div>
@@ -126,13 +126,13 @@ export default function Nav({ className }: { className?: string }) {
                     </NavigationMenu>
                     <div className="hidden md:flex gap-2 items-center">
                         <Link href="https://www.linkedin.com/in/muhammad-erlangga-1b72801b1/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                            <IconBrandLinkedin className='size-4 stroke-0' />
+                            <Ambulance size={18} />
                         </Link>
                         <Link href="https://www.instagram.com/muhammaderlangga99/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                            <IconBrandInstagram className='size-4 stroke-0' />
+                            <ShieldAlert size={18} />
                         </Link>
                         <Link href="https://github.com/muhammaderlangga99" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                            <IconBrandGithub className='size-4 stroke-0' />
+                            <Flame size={18} />
                         </Link>
                         <ThemeSwitch className='w-auto' />
                     </div>
