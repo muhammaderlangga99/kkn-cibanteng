@@ -32,7 +32,8 @@ const ThemeSwitch = ({ className }: { className?: String }) => {
     <Select value={ theme } onValueChange={(value) => setTheme(value)}>
       <SelectTrigger className={`bg-transparent flex items-center ${className}`}>
         <SelectValue placeholder="Theme"/>
-      </SelectTrigger>
+          </SelectTrigger>
+          
       <SelectContent>
         <SelectItem value="light"><IconSun className='size-4 inline-block' /> light</SelectItem>
         <SelectItem value="dark"><IconMoonStar className='size-4 inline-block'/> dark</SelectItem>

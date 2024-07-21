@@ -23,24 +23,12 @@ export type Rumah = {
 
 export const columns: ColumnDef<Rumah>[] = [
     {
-        accessorKey: "id",
-        header: "Nomor",
-        cell: ({ row }) => {
-            const id = row.getValue("id") as number;
-            return <p className="text-center">{id}</p>
-        }
-    },
-    {
         accessorKey: "alamat",
         header: "Alamat",
         cell: ({ row }) => {
             const alamat = row.getValue("alamat") as string;
-            return <p className="w-36">{alamat}</p>
+            return <p className="w-40">{alamat}</p>
         }
-    },
-    {
-        accessorKey: "kk",
-        header: "Penghuni",
     },
     {
         accessorKey: "link",
@@ -49,11 +37,18 @@ export const columns: ColumnDef<Rumah>[] = [
             const link = row.getValue("link") as string;
             const alamat = row.getValue("alamat") as string;
             return (
-                <a href={link} className="text-white bg-zinc-800 px-3 md:px-2 py-1.5 shadow-lg flex justify-center md:inline-block rounded-full">
+                <a href={link} className="bg-zinc-200 dark:text-white dark:bg-zinc-800 px-3 md:px-2 py-1.5 shadow-lg flex justify-center md:inline-block rounded-full">
                     <IconLocationFill className="size-4 inline-block mr-1" />gmaps</a>
             );
         },
         // bungkus isi cell dengan tag <a> untuk membuat link
-    
+    },
+    {
+        accessorKey: "kk",
+        header: "Penghuni",
+        cell: ({ row }) => {
+            const kk = row.getValue("kk") as string;
+            return <p className="w-36 md:w-auto">{kk}</p>
+        }
     },
 ];

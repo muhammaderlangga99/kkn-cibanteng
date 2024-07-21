@@ -35,6 +35,7 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ThemeSwitch from './themeSwitch';
+import { Ambulance, FireExtinguisher, ShieldAlert } from 'lucide-react';
 const components: { title: string; href: string, icon: any }[] = [
     {
         title: "Home",
@@ -74,20 +75,20 @@ export default function Nav({ className }: { className?: string }) {
             <div className="sub-nav py-4 max-w-7xl m-auto flex justify-between md:justify-start items-center gap-5">
                 <div className="brand flex items-center justify-center gap-x-1">
                     <IconCube />
-                    <a href="#" className='text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-black dark:from-white via-zinc-700 dark:via-zinc-400'>me</a>
+                    <a href="#" className='text-base font-bold bg-clip-text text-transparent bg-gradient-to-r from-black dark:from-white via-zinc-700 dark:via-zinc-400'>RT05</a>
                 </div>
                 <div className='flex gap-2 md:gap-0 md:justify-between md:w-full'>
                     <NavigationMenu>
                         <NavigationMenuList className='space-x-6'>
                             <div className="flex md:hidden gap-2 items-center">
                                 <Link href="https://www.linkedin.com/in/muhammad-erlangga-1b72801b1/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                                    <IconBrandLinkedin className='size-4 stroke-0' />
+                                    <Ambulance size={18} />
                                 </Link>
                                 <Link href="https://www.instagram.com/muhammaderlangga99/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                                    <IconBrandInstagram className='size-4 stroke-0' />
+                                    <ShieldAlert size={18} />
                                 </Link>
                                 <Link href="https://github.com/muhammaderlangga99" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
-                                    <IconBrandGithub className='size-4 stroke-0' />
+                                    <FireExtinguisher size={18} />
                                 </Link>
                                 <ThemeSwitch className='w-auto' />
                             </div>
