@@ -415,7 +415,7 @@ export function Header() {
     
     return (
         <div className="flex flex-col items-center md:pt-10 h-[68vh] md:h-auto dark:bg-zinc-950 bg-white relative w-full">
-            <div className="max-w-7xl mx-auto w-full mt-14 relative overflow-hidden h-full md:h-[40rem] px-4">
+            <div className="max-w-7xl mx-auto w-full mt-20 relative overflow-hidden h-full md:h-[40rem] px-4">
                 <motion.div
                     initial={{
                         opacity: 0,
