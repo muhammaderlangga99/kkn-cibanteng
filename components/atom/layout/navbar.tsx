@@ -35,20 +35,37 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ThemeSwitch from './themeSwitch';
-import { Ambulance, FireExtinguisher, Flame, ShieldAlert } from 'lucide-react';
+import { Ambulance, ChevronDown, FireExtinguisher, Flame, ShieldAlert } from 'lucide-react';
 const components: { title: string; href: string, icon: any }[] = [
     {
         title: "Home",
         href: "/",
         icon: () => <IconHome1 className='size-3.5' />
     },
-    {
-        title: "Galeri",
-        href: "/galeri",
-        icon: () => <IconCircleInfo className='size-3.5' />
-    },
+    // {
+    //     title: "Galeri",
+    //     href: "/galeri",
+    //     icon: () => <IconCircleInfo className='size-3.5' />
+    // },
 ]
 
+const darurat = [
+    {
+        title: "Ambulance",
+        href: "081311304928",
+        icon: () => <Ambulance size={18} />
+    },
+    {
+        title: "Polisi",
+        href: "112",
+        icon: () => <ShieldAlert size={18} />
+    },
+    {
+        title: "Damkar",
+        href: "02518322100",
+        icon: () => <Flame size={18} />
+    },
+]
 
  
 
@@ -81,7 +98,7 @@ export default function Nav({ className }: { className?: string }) {
                     <NavigationMenu>
                         <NavigationMenuList className='space-x-6'>
                             <div className="flex md:hidden gap-2 items-center">
-                                <Link href="https://www.linkedin.com/in/muhammad-erlangga-1b72801b1/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
+                                {/* <Link href="https://www.linkedin.com/in/muhammad-erlangga-1b72801b1/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
                                     <Ambulance size={18} />
                                 </Link>
                                 <Link href="https://www.instagram.com/muhammaderlangga99/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
@@ -89,10 +106,32 @@ export default function Nav({ className }: { className?: string }) {
                                 </Link>
                                 <Link href="https://github.com/muhammaderlangga99" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
                                     <Flame size={18} />
-                                </Link>
+                                </Link> */}
+                                
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger className='border px-3 py-2 bg-opacity-10 rounded-lg md:hidden flex gap-x-1 items-center'>
+                                        Darurat <ChevronDown size={15} />
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className='w-36 flex flex-col -translate-x-3'>
+                                        <DropdownMenuSeparator />
+                                        {
+                                            darurat.map((items, key) => (
+                                                <Link href={`tel:${items.href}`} className={`hover:bg-zinc-100 dark:hover:bg-zinc-800 p-1.5 rounded-md text-sm flex ${pathname === items.href ? 'bg-zinc-100 dark:bg-zinc-800' : ''
+                                                    }`} key={key}>
+                                                    {items.title}
+                                                    <DropdownMenuShortcut className='flex items-center'>
+                                                        {items.icon()}
+                                                    </DropdownMenuShortcut>
+                                                </Link>
+                                            
+                                            ))
+                                        }
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                                
                                 <ThemeSwitch className='w-auto' />
                             </div>
-                            <DropdownMenu>
+                            {/* <DropdownMenu>
                                 <DropdownMenuTrigger className='border p-2 dark:bg-zinc-900 bg-opacity-10 rounded-xl md:hidden'>
                                     <IconHamburger className='size-5' />
                                 </DropdownMenuTrigger>
@@ -112,7 +151,7 @@ export default function Nav({ className }: { className?: string }) {
                                         ))
                                     }
                                 </DropdownMenuContent>
-                            </DropdownMenu>
+                            </DropdownMenu> */}
                             {
                                 components.map((items, key) => (
                                     <NavigationMenuItem key={key} className='hidden text-sm md:inline-block'>
@@ -124,7 +163,7 @@ export default function Nav({ className }: { className?: string }) {
                             }
                         </NavigationMenuList>
                     </NavigationMenu>
-                    <div className="hidden md:flex gap-2 items-center">
+                    {/* <div className="hidden md:flex gap-2 items-center">
                         <Link href="https://www.linkedin.com/in/muhammad-erlangga-1b72801b1/" target='_blank' className='p-1.5 rounded-md mt-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
                             <Ambulance size={18} />
                         </Link>
@@ -135,7 +174,7 @@ export default function Nav({ className }: { className?: string }) {
                             <Flame size={18} />
                         </Link>
                         <ThemeSwitch className='w-auto' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>

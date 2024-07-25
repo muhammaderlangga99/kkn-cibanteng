@@ -69,7 +69,7 @@ export function DataTable<TData, TValue>({
                 onChange={(event) => table.getColumn("alamat")?.setFilterValue(event.target.value)}
                 onSubmit={onSubmit}
             />
-            <div className="mt-5">
+            <div className="mt-5 rounded-xl overflow-hidden">
                 <Table className="rounded-xl dark:bg-zinc-900 bg-zinc-100">
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (

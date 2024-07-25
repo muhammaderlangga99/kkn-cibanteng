@@ -27,7 +27,7 @@ export const columns: ColumnDef<Rumah>[] = [
         header: "Alamat",
         cell: ({ row }) => {
             const alamat = row.getValue("alamat") as string;
-            return <p className="w-40">{alamat}</p>
+            return <p className="w-36">{alamat}</p>
         }
     },
     {
