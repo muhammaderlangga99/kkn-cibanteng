@@ -67,7 +67,7 @@ export function DataTable<TData, TValue>({
             <PlaceholdersAndVanishInput
                 placeholders={placeholders}
                 onChange={(event) => {
-                    table.getColumn("id")?.setFilterValue(event.target.value)
+                    table.getColumn("alamat")?.setFilterValue(event.target.value)
                 }}
                 onSubmit={onSubmit}
             />
