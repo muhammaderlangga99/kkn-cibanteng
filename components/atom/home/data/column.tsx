@@ -37,7 +37,7 @@ export const columns: ColumnDef<Rumah>[] = [
             const link = row.getValue("link") as string;
             const alamat = row.getValue("alamat") as string;
             return (
-                <a href={link} className="bg-zinc-200 dark:text-white dark:bg-zinc-800 px-3 md:px-2 py-1.5 shadow-lg flex justify-center md:inline-block rounded-full">
+                <a href={link} className="bg-blue-500 text-white dark:text-white dark:bg-blue-900 px-3 md:px-2 py-1.5 shadow-lg border border-zinc-400 dark:border-blue-600 dark:shadow-md dark:shadow-blue-800 shadow-blue-300 flex justify-center md:inline-block rounded-full">
                     <IconLocationFill className="size-4 inline-block mr-1" />gmaps</a>
             );
         },
