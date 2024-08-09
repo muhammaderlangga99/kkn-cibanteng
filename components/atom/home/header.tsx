@@ -38,9 +38,9 @@ export function Hero() {
                         </div>
                         <div className="h-28 w-1 border-l border-dashed dark:border-zinc-500 border-zinc-700 m-auto"></div>
                         <h1 className="text-4xl font-semibold text-black dark:text-white" data-aos='fade-up' data-aos-delay='100' data-aos-duration="500">
-                            Innovative Web Solutions <br />
+                            Peta Wilayah <br />
                             <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                                Fast & Easy
+                                Dan Data Rumah RT.05
                             </span>
                         </h1>
                     </div>
